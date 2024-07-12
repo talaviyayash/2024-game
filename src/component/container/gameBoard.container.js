@@ -84,6 +84,15 @@ const GameBoardContainer = () => {
                 arrayOfBoard[i][j] = undefined;
               }
             }
+            if (
+              arrayOfBoard[colSafety][rowSafety] === undefined &&
+              arrayOfBoard[i][j]
+            ) {
+              arrayOfBoard[colSafety][rowSafety] = {
+                value: arrayOfBoard[i][j].value,
+                merge: true,
+              };
+            }
           }
         }
 
