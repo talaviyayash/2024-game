@@ -74,10 +74,15 @@ const GameBoardContainer = () => {
             const colSafety =
               column + i === -1 ? 0 : column + i === 4 ? 3 : column + i;
 
-            if (arrayOfBoard[colSafety][rowSafety] && arrayOfBoard[i][j] ) {
-              if (arrayOfBoard[colSafety][rowSafety].value ===  arrayOfBoard[i][j].value) {
-                arrayOfBoard[colSafety][rowSafety].value = arrayOfBoard[i][j] + ;
-              } 
+            if (arrayOfBoard[colSafety][rowSafety] && arrayOfBoard[i][j]) {
+              if (
+                arrayOfBoard[colSafety][rowSafety].value ===
+                arrayOfBoard[i][j].value
+              ) {
+                arrayOfBoard[colSafety][rowSafety].value =
+                  arrayOfBoard[i][j].value + arrayOfBoard[i][j].value;
+                arrayOfBoard[i][j] = undefined;
+              }
             }
           }
         }
